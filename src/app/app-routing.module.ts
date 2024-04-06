@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'intro', component: IntroComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: HomeComponent }, //go home if lost
+  { path: '**', redirectTo: '/home', }, //go home if lost
 ];
 
 @NgModule({

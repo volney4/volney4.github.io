@@ -11,6 +11,8 @@
         border-radius: 50%; /* Makes the container and image circular */
         width: 400px; /* Set the width of the circular container */
         height: 400px; /* Set the height of the circular container */
+        min-width: 400px; /* Set the width of the circular container */
+        min-height: 400px; /* Set the height of the circular container */
         margin: 50px;
     }
     

@@ -10,6 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { IntroComponent } from './intro/intro.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ProjectPreviewComponent } from './project-preview/project-preview.compo
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
