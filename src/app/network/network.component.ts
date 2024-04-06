@@ -68,8 +68,8 @@ export class NetworkComponent {
   }
 
   private initCanvasSize(canvas: HTMLCanvasElement): void {
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
+    this.ctx.canvas.width = canvas.clientWidth;
+    this.ctx.canvas.height = canvas.clientHeight;
   }
 
   private initBalls(canvas: HTMLCanvasElement): void {

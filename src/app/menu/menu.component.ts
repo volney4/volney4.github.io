@@ -10,6 +10,7 @@ import { filter } from 'rxjs/operators';
 export class MenuComponent implements OnInit {
 
   isHomeRoute = false;
+  isMenuToggled=false;
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -21,5 +22,8 @@ export class MenuComponent implements OnInit {
       // Check if the current route is the home route
       this.isHomeRoute = (event.url === '/home');
     });
+  }
+  toggleMenu(){
+    this.isMenuToggled = !this.isMenuToggled;
   }
 }

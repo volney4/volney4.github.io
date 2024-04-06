@@ -5,9 +5,25 @@
     <div>
         <a [routerLink]="['/intro']" routerLinkActive="active" class="menu-item">Intro</a>
         <a [routerLink]="['/portfolio']" routerLinkActive="active" class="menu-item">Portfolio</a>
-        <a [routerLink]="['/blog']" routerLinkActive="active" class="menu-item">Blog</a>
         <a [routerLink]="['/contact']" routerLinkActive="active" class="menu-item">Contact</a>
     </div>
-    
+</div>
+<div class="mobile-menu">
+  <div class=menu-icon>
+    <svg (click)="toggleMenu()" id="hamburger" class="Header__toggle-svg" [ngClass]="{toggled: isMenuToggled}" viewbox="0 0 60 40" width="60" height="40">
+      <g stroke="#2196a7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path id="top-line" d="M10,10 L50,10 Z"></path>
+        <path id="middle-line" d="M10,20 L50,20 Z"></path>
+        <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+      </g>
+    </svg>
   </div>
+  <div class='menu-options' [ngClass]="{toggled: isMenuToggled}">
+    <a [routerLink]="['/home']" routerLinkActive="active" class="menu-item home" (click)="toggleMenu()">Home</a>
+    <a [routerLink]="['/intro']" routerLinkActive="active" class="menu-item" (click)="toggleMenu()">Intro</a>
+    <a [routerLink]="['/portfolio']" routerLinkActive="active" class="menu-item" (click)="toggleMenu()">Portfolio</a>
+    <a [routerLink]="['/contact']" routerLinkActive="active" class="menu-item" (click)="toggleMenu()">Contact</a>
+  </div>
+  
+</div>
   

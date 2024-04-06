@@ -1,4 +1,14 @@
 <div class=page-container>
     <div class=page-title>Portfolio</div>
     <div class=page-subtitle>Some projects of mine</div>
+    <div class='project-gallery'>
+        <app-project-preview *ngFor="let project of projects" 
+        [title]='project.title' 
+        [description]='project.description'
+        [imageUrl]='project.imageUrl'
+        [date]='project.date'
+        [tags]='project.tags'
+        ></app-project-preview>
+    </div>
+    
 </div>

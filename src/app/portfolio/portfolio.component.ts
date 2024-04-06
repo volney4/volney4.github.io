@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { projectsData } from '../projects-data'; // Import the projects data
 
 @Component({
   selector: 'app-portfolio',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  public projects: any[] = projectsData; 
 
-  constructor() { }
+  constructor() {
+    this.projects.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+   }
 
   ngOnInit(): void {
   }

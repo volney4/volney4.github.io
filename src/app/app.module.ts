@@ -8,6 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { NetworkComponent } from './network/network.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { IntroComponent } from './intro/intro.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { IntroComponent } from './intro/intro.component';
     MenuComponent,
     NetworkComponent,
     PortfolioComponent,
-    IntroComponent
+    IntroComponent,
+    ProjectComponent,
+    ProjectPreviewComponent
   ],
   imports: [
     BrowserModule,
