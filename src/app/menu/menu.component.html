@@ -1,0 +1,13 @@
+<div class="menu" [ngClass]="{'page-menu': !isHomeRoute}">
+    <div>
+      <a [routerLink]="['/home']" routerLinkActive="active" class="menu-item home">Home</a>
+    </div>
+    <div>
+        <a [routerLink]="['/intro']" routerLinkActive="active" class="menu-item">Intro</a>
+        <a [routerLink]="['/portfolio']" routerLinkActive="active" class="menu-item">Portfolio</a>
+        <a [routerLink]="['/blog']" routerLinkActive="active" class="menu-item">Blog</a>
+        <a [routerLink]="['/contact']" routerLinkActive="active" class="menu-item">Contact</a>
+    </div>
+    
+  </div>
+  

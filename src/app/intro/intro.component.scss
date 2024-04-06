@@ -1,0 +1,39 @@
+@import '../../vars.scss';
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px;
+    .circle-container {
+        display: inline-block; /* Ensures container wraps around the image */
+        overflow: hidden; /* Clips the image to the shape of the container */
+        border-radius: 50%; /* Makes the container and image circular */
+        width: 400px; /* Set the width of the circular container */
+        height: 400px; /* Set the height of the circular container */
+        margin: 50px;
+    }
+    
+    .circle-image {
+        display: block; /* Ensures the image is a block element */
+        width: 100%; /* Fills the width of the circular container */
+        height: auto; /* Maintains aspect ratio of the image */
+        object-fit: cover; /* Ensures image fills the circular container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .bio{
+        width: 60%;
+        line-height: 30px;
+    } 
+}
+img.framed {
+    box-shadow:
+      -50px -50px 0 -40px $blue,
+      50px 50px 0 -40px $blue;
+  }
+  .gallery{
+      img{
+          height: 300px;
+          margin: 40px;
+      }
+  }

@@ -1,0 +1,44 @@
+@import '../../vars.scss';
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+
+    .menu-item{
+        box-sizing: border-box;
+        display: inline-block;
+        color: black;
+        padding: 25px;
+        padding-left: 45px;
+        padding-right: 45px;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:visited{
+            color: black;
+        }
+       &.active{
+           color: $blue;
+           &:not(.home){
+               border-bottom: 3px solid $blue;
+           }
+           
+       } 
+       &:hover{
+           color: $darkestBlue;
+            &:not(.home){
+                border-bottom: 3px solid $darkestBlue;
+            }
+           
+       }
+
+    }
+    &.page-menu{
+        background-color: white;
+        -webkit-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+        -moz-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+        box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+    }
+}

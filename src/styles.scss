@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import './vars.scss';
+body {
+    background-color: #f8f9fb;
+    // color: $lightestBlue;
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+  }
+  .page-container{
+    margin: 15px;
+  }
+  .page-title{
+    font-size: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+  }
+  .page-subtitle{
+    color: #a6a6a6;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+  }
