@@ -29,6 +29,7 @@ export function convertHex(hex: string, opacity: number): string {
   styleUrls: ['./network.component.scss']
 })
 export class NetworkComponent {
+  
 
   @ViewChild('networkCanvas') networkCanvasRef: ElementRef<HTMLCanvasElement>;
 
@@ -52,11 +53,24 @@ export class NetworkComponent {
   }
 
   ngAfterViewInit(): void {
+    if(window.matchMedia("(max-width: 768px)").matches){
+      setTimeout(() => {
+        this.initialize();
+      }, 500); //Adding this delay to give mobile devices a chance to set the window dimensions
+    }
+    else{
+      this.initialize();
+    }
+    
+  }
+
+  initialize(){
     const canvas = this.networkCanvasRef.nativeElement;
     this.ctx = canvas.getContext('2d');
     this.initCanvasSize(canvas);
     this.initBalls(canvas);
     this.startAnimation();
+
   }
 
   @HostListener('window:resize', ['$event'])
