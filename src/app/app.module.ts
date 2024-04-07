@@ -11,6 +11,7 @@ import { IntroComponent } from './intro/intro.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     PortfolioComponent,
     IntroComponent,
     ProjectComponent,
-    ProjectPreviewComponent
+    ProjectPreviewComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
