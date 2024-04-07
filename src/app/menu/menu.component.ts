@@ -20,7 +20,8 @@ export class MenuComponent implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       // Check if the current route is the home route
-      this.isHomeRoute = (event.url === '/home');
+      console.log(event.url)
+      this.isHomeRoute = (event.url === '/home' || event.url === '/');
     });
   }
   toggleMenu(){
