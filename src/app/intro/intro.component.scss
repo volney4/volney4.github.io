@@ -9,10 +9,10 @@
         display: inline-block; /* Ensures container wraps around the image */
         overflow: hidden; /* Clips the image to the shape of the container */
         border-radius: 50%; /* Makes the container and image circular */
-        width: 400px; /* Set the width of the circular container */
-        height: 400px; /* Set the height of the circular container */
-        min-width: 400px; /* Set the width of the circular container */
-        min-height: 400px; /* Set the height of the circular container */
+        // width: 400px; /* Set the width of the circular container */
+        // height: 400px; /* Set the height of the circular container */
+        max-width: 400px; /* Set the width of the circular container */
+        max-height: 400px; /* Set the height of the circular container */
         margin: 50px;
     }
     
@@ -27,6 +27,102 @@
         width: 60%;
         line-height: 30px;
     } 
+}
+.timeline{
+    //Colors
+// $black: #34435E;
+$white: #ffffff;
+background-color: $lightestBlue;
+.timeline-title{
+    font-size: 45px;
+    // min-width: 20%;
+    // max-width: 60%;
+    width: fit-content;
+    margin-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 3px solid $blue;
+}
+main {
+    min-width: 20%;
+    max-width: 60%;
+    margin: auto;
+  }
+  
+  .event {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, $blue 0%, $darkestBlue 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px 50px 40px 50px;
+    // counter-increment: section;
+    position: relative;
+    color: $dark;
+    .title{
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .subtitle{
+        font-size: 12px;
+        color: $darkestBlue;
+        font-style: italic;
+    }
+    .desc{
+        color: $dark;
+        font-size: 14px;
+    }
+    
+    //numbers
+    &:before {
+        content: attr(data-year);
+      position: absolute;
+      border-radius: 20px;
+      padding: 10px;
+      height: 1.25em;
+      width: 60px;
+      background-color: $dark;
+      text-align: center;
+      line-height: 1.25em;
+      color: $white;
+      font-size: 1em;
+    }
+  }
+  //odd number borders
+  .event:nth-child(even) {
+    border-right: 3px solid;
+    padding-left: 0;
+    
+    &:before {
+      left: 100%; 
+      margin-left: -40px;
+    }
+  }
+  //even number borders
+  .event:nth-child(odd) {
+    border-left: 3px solid;
+    padding-right: 0;
+    
+    &:before {
+      right: 100%; 
+      margin-right: -40px;
+    }
+  }
+  //handle first and last
+  .event:first-child {
+    border-top: 0;
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+  }
+  .event:last-child {
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+  }
+
 }
 img.framed {
     box-shadow:
@@ -44,5 +140,12 @@ img.framed {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .gallery{
+        img{
+            max-width: 300px;
+            height: auto;
+            // margin: 40px;
+        }
     }
 }
