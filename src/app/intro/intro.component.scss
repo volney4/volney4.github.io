@@ -39,3 +39,10 @@ img.framed {
           margin: 40px;
       }
   }
+@media screen and (max-width: 815px) {
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
